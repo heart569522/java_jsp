@@ -1,0 +1,105 @@
+
+.u-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.skill {
+    margin: 1em 0;
+    position: relative;
+    width: 70.5em;
+}
+
+@media only screen and (max-width: 1200px) {
+	.skill {
+        margin: 1em 0;
+        position: relative;
+        width: 50.5em;
+    }
+  }
+
+@media only screen and (max-width: 899px) {
+	.skill {
+        margin: 1em 0;
+        position: relative;
+        width: 30.5em;
+    }
+  }
+
+@media only screen and (max-width: 550px) {
+	.skill {
+        margin: 1em 0;
+        position: relative;
+        width: 22.5em;
+    }
+  }
+
+@media only screen and (max-width: 450px) {
+	.skill {
+        margin: 1em 0;
+        position: relative;
+        width: 16.5em;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  }
+
+.skill__type {
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-size: 1.5em;
+    letter-spacing: .145em;
+    text-transform: uppercase;
+    width: 5em;
+}
+
+.skill__outer-bar, .skill__inner-bar {
+    height: .75em;
+}
+
+.skill__outer-bar {
+    margin-top: 1em;
+    background: rgba(255, 255, 255, 0.123);
+    
+}
+
+.skill__inner-bar {
+    animation: fillBar 1s forwards;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+}
+
+.skill__inner-bar--100 {
+    width: 100%;
+    background: #F8A518;
+}
+.skill__inner-bar--90 {
+    width: 90%;
+    background: #18A6F8;
+}
+.skill__inner-bar--80 {
+    width: 60%;
+    background: #F8DD18;
+}
+.skill__inner-bar--70 {
+    width: 80%;
+    background: #8718F8;
+}
+.skill__inner-bar--60 {
+    width: 75%;
+    background: #F818B5;
+}
+
+@keyframes fillBar {
+    to {
+        transform: scaleX(1);
+    }
+}
