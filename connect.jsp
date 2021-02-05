@@ -5,29 +5,29 @@
 <%@ page import="java.sql.DriverManager" %>
 
 <%
-String driver = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://localhost/";
-String database = "user";
-String user = "root";
-String password = "";
+    String driver = "com.mysql.jdbc.Driver";
+    String connectionUrl = "jdbc:mysql://127.0.0.1/";
+    String database = "heart";
+    String id = "root";
+    String pass = "1589900113113";
 
-try {
-    Class.forName(driver);
-} catch (ClassNotFoundException e){
-    e.printStackTrace();
-}
-Connection connection = null;
-Statement statement = null;
-ResultSet resultSet = null;
+    try {
+        Class.forName(driver);
+    } catch (ClassNotFoundException e) {
+        e.printStackTrace();
+    }
 
-connection = DriverManager.getConection(connectionUrl+database, user, password);
-statement = connection.createStatement();
+    Connection connection = null;
+    Statement statement = null;
+    ResultSet resultSet = null;
 
-if(connection != null){
-    out.println("Database Connected.");
-} else {
-    out.println("Database Connect Failed.");
-}
+    connection = DriverManager.getConnection(connectionUrl+database, id, pass);
+    statement=connection.createStatement();
 
-%> 
+    if(connection !=null) {
+        out.println("HEART WIRUNROM");
+    } else {
+        out.println("not connect.");
+    }
 
+%>
