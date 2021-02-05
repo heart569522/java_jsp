@@ -12,34 +12,36 @@
     <style>
         body {
             margin: 0;
-            background-color: #00e08a;
+            /* background-color: #00e08a; */
         }
 
         .container {
-            background-color: #ffffff;
+            /* background-color: #ffffff; */
         }
     </style>
 
 </head>
 
 <body>
-    <div class="container">
-        <h1>LOGIN</h1>
-        <form action="" method="get">
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <label class="form-label">Username</label>
-                    <input name="username" type="text" class="form-control">
+    <div class="color-column">
+        <div class="container">
+            <h1>LOGIN</h1>
+            <form action="" name="form1" method="post" onsubmit="JavaScript:return fncSubmit();">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <label class="form-label">Username</label>
+                        <input name="username" type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="form-label">Password</label>
+                        <input name="password" type="password" class="form-control">
+                    </div>
                 </div>
-                <div class="col-md-6 col-sm-6">
-                    <label class="form-label">Password</label>
-                    <input name="password" type="password" class="form-control">
-                </div>
-            </div>
-            <br>
-            <button style="float: right; margin-left: 5px;" type="reset" class="btn btn-danger">Cancel</button>
-            <button style="float: right;" type="submit" class="btn btn-success">OK</button>
-        </form>
+                <br>
+                <button style="float: right; margin-left: 5px;" type="reset" class="btn btn-danger">Cancel</button>
+                <button style="float: right;" type="submit" class="btn btn-success">OK</button>
+            </form>
+        </div>
     </div>
 
 
@@ -59,6 +61,30 @@
 
     <!-- SweetAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        function fncSubmit(){
+            swall({
+                title: "ERROR",
+                text: "Please Enter Username",
+                icon: "error",
+            });
+
+            document.form1.username.focus();
+            return false;
+        }
+        if(document.form1.password.value == ""){
+            swall({
+                title: "ERROR",
+                text: "Please Enter Username",
+                icon: "error", 
+            });
+
+            document.form1.password.focus();
+            return false;            
+        }
+        document.form1.submit();
+    }
+    </script>
 </body>
 
 </html>
