@@ -25,7 +25,7 @@
     statement=connection.createStatement();
 
     if(connection !=null) {
-        out.println("Connect Database");
+        //out.println("Connect Database");
     } else {
         out.println("not connect.");
     }
