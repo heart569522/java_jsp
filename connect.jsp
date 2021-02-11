@@ -7,7 +7,7 @@
 <%
     String driver = "com.mysql.jdbc.Driver";
     String connectionUrl = "jdbc:mysql://127.0.0.1/";
-    String database = "user";
+    String database = "library";
     String id = "root";
     String pass = "";
 

@@ -14,10 +14,6 @@
             margin: 0;
             /* background-color: #00e08a; */
         }
-
-        .container {
-            /* background-color: #ffffff; */
-        }
     </style>
 
 </head>
@@ -63,27 +59,28 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript">
         function fncSubmit(){
-            swal({
-                title: "ERROR",
-                text: "Please Enter Username",
-                icon: "error",
-            });
+            if(document.form1.username.value == ""){
+                swal({
+                    title: "ERROR",
+                    text: "Please Enter Username",
+                    icon: "error",
+                });
 
-            document.form1.username.focus();
-            return false;
-        }
-        if(document.form1.password.value == ""){
-            swal({
-                title: "ERROR",
-                text: "Please Enter Username",
-                icon: "error", 
-            });
+                document.form1.username.focus();
+                return false;
+            }
+            if(document.form1.password.value == ""){
+                swal({
+                    title: "ERROR",
+                    text: "Please Enter Password",
+                    icon: "error", 
+                });
 
-            document.form1.password.focus();
-            return false;            
+                document.form1.password.focus();
+                return false;            
+            }
+            document.form1.submit();
         }
-        document.form1.submit();
-    }
     </script>
 </body>
 
