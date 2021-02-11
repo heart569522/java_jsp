@@ -7,9 +7,9 @@
 <%
     String driver = "com.mysql.jdbc.Driver";
     String connectionUrl = "jdbc:mysql://127.0.0.1/";
-    String database = "heart";
+    String database = "user";
     String id = "root";
-    String pass = "1589900113113";
+    String pass = "";
 
     try {
         Class.forName(driver);
@@ -25,7 +25,7 @@
     statement=connection.createStatement();
 
     if(connection !=null) {
-        out.println("HEART WIRUNROM");
+        out.println("Connect Database");
     } else {
         out.println("not connect.");
     }
