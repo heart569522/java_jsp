@@ -38,10 +38,11 @@
                 pstatement.close();
               }
       }
+
       if(request.getParameter("userid")!=null) {
         String userid =request.getParameter("userid");
         PreparedStatement pstatement = null; 
-        String sql ="DELETE FROM member WHERE userid= "+userid  ;
+        String sql ="DELETE FROM lib_member WHERE member_id = "+userid  ;
         pstatement = connection.prepareStatement(sql);
         int updateQuery = pstatement.executeUpdate(); 
           if (updateQuery != 0)  { 

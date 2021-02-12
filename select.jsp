@@ -36,7 +36,7 @@
                                 <td><%=resultSet.getString("member_type") %></td>
                                 <td style="text-align: center;">
                                     <a href="" class="btn btn-warning">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
+                                    <a href="insert.jsp?userid=<%=resultSet.getString("member_id") %>" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         <% } { connection.close(); } %>
