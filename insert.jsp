@@ -38,7 +38,6 @@
                 pstatement.close();
               }
       }
-
       if(request.getParameter("userid")!=null) {
         String userid =request.getParameter("userid");
         PreparedStatement pstatement = null; 
@@ -52,5 +51,3 @@
           }
       }
     %>
-  </body>
-</html>
