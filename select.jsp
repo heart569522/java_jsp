@@ -33,6 +33,7 @@
                                 <td><%=resultSet.getString("member_address") %></td>
                                 <td><%=resultSet.getString("member_phone") %></td>
                                 <td><%=resultSet.getString("member_type") %></td>
+                                <td><a></a></td>
                             </tr>
                         <% } { connection.close(); } %>
                     </tbody>
