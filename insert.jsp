@@ -8,6 +8,7 @@
 		    String username = request.getParameter("username");
 		    String password = request.getParameter("password");
         String firstname = request.getParameter("firstname"); 
+        String lastname = request.getParameter("lastname"); 
         String address = request.getParameter("address");
         String phone = request.getParameter("phone"); 
         String author = request.getParameter("author");  
