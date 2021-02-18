@@ -50,4 +50,27 @@
             <%
           }
       }
+      if (request.getParameter("editid")!=null){
+        String userid = request.getParameter("editid");
+        String username = request.getParameter("txtusername");
+        String password = request.getParameter("txtpassword");
+        PreparedStatement pstatement = null;
+        int updateQuery = 0;
+        String sql="Update lib_member set member_username=?, member_password=? WHERE member.userid="+userid;
+	      pstatement = connection.prepareStatement(sql);
+        pstatement.setString(1, username);
+        pstatement.setString(2, password);
+        pstatement.setString(3, firstname);
+        pstatement.setString(4, lastname);
+        pstatement.setString(5, address);
+        pstatement.setString(6, phone);
+        pstatement.setString(7, author);
+        updateQuery = pstatement.executeUpdate();
+          if (updateQuery != 0){
+            %>
+              <script>window.location.replace("select.jsp");</script>
+            <%
+          }
+      }
+
     %>

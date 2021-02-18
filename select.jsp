@@ -1,12 +1,8 @@
 <%@page import="java.sql.*" %>
 <%@ include file="connect.jsp" %>
-<%@ include file="./template/template_head.html" %>
+<%@ include file="./template/template_head.jsp" %>
         <body style="background-color: #666;">
-        <%
-            request.setCharacterEncoding("UTF-8"); 
-            response.setContentType("text/html; charset-UTF-8");
-            response.setCharacterEncoding("UTF-8"); 
-        %>
+        
             <div class="container" style="padding-top: 20px;">
                 <table class="table table-strip table-hover">
                     <thead class="table-dark">
@@ -35,7 +31,7 @@
                                 <td><%=resultSet.getString("member_phone") %></td>
                                 <td><%=resultSet.getString("member_type") %></td>
                                 <td style="text-align: center;">
-                                    <a href="" class="btn btn-warning">Edit</a>
+                                    <a href="edit.jsp?userid=<%=resultSet.getString("member_id") %>" class="btn btn-warning">Edit</a>
                                     <a href="insert.jsp?userid=<%=resultSet.getString("member_id") %>" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
