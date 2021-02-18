@@ -1,7 +1,6 @@
 <%@page import="java.sql.*"%>
 <%@ include file="connect.jsp" %>
-<!DOCTYPE html>
-<html>
+<%@ include file="./template/template_head.jsp" %>
   <body>
     <%  
       if(request.getParameter("btnadd")!=null) {
@@ -52,11 +51,17 @@
       }
       if (request.getParameter("editid")!=null){
         String userid = request.getParameter("editid");
-        String username = request.getParameter("txtusername");
-        String password = request.getParameter("txtpassword");
+        String username = request.getParameter("username");
+		    String password = request.getParameter("password");
+        String firstname = request.getParameter("firstname"); 
+        String lastname = request.getParameter("lastname"); 
+        String address = request.getParameter("address");
+        String phone = request.getParameter("phone"); 
+        String author = request.getParameter("author");
+
         PreparedStatement pstatement = null;
         int updateQuery = 0;
-        String sql="Update lib_member set member_username=?, member_password=? WHERE member.userid="+userid;
+        String sql="Update lib_member set member_username=?, member_password=?, member_firstname=?, member_lastname=?, member_address=?, member_phone=?, member_type=? WHERE lib_member.member_id = "+userid;
 	      pstatement = connection.prepareStatement(sql);
         pstatement.setString(1, username);
         pstatement.setString(2, password);
