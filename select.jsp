@@ -49,7 +49,7 @@
                     </tbody>
                 </table>
             <%
-                } else {
+                } else if(strauthors.equals("member"))  {
             %>
                 <div class="row">
                     <h1 style="color: #fff; font-size: 75px; float: left;">MEMBER LIST
@@ -92,6 +92,10 @@
                     </tbody>
                 </table>
             <%
+                } else {
+                    <%
+                    <script>window.location.replace("index.jsp");</script>
+                    %>
                 }
             %>
                 
