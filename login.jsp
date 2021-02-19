@@ -9,17 +9,17 @@ pageEncoding="UTF-8"%>
 
 <body>
     <%
-    String username=request.getParameter("username");
+    String username = request.getParameter("username");
     session.setAttribute("username", username);	
-    session.putValue(" username", username);
-    String password=request.getParameter("password");
-    String sql ="select * from member where username='"+ username+"' and password='"+password+"'";
+    session.putValue("username", username);
+    String password = request.getParameter("password");
+    String sql ="select * from lib_member where member_username='"+username+"' and member_password='"+password+"'";
     resultSet = statement.executeQuery(sql);
         while(resultSet.next()){
-            String struserid = resultSet.getString("userid");
-            String strusername = resultSet.getString("username");
-            String strpassword = resultSet.getString("password");
-            String strauthors = resultSet.getString("authors");
+            String struserid = resultSet.getString("member_id");
+            String strusername = resultSet.getString("member_username");
+            String strpassword = resultSet.getString("member_password");
+            String strauthors = resultSet.getString("member_auther");
             session.setAttribute("struserid",struserid);	
             session.setAttribute("strusername",strusername);	
             session.setAttribute("strpassword",strpassword);
