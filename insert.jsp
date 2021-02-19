@@ -15,7 +15,7 @@
         PreparedStatement pstatement = null;
         int updateQuery = 0;
             try {
-              String sql = "insert into lib_member(member_username, member_password, member_firstname, member_lastname, member_address, member_phone, member_type) values(?,?,?,?,?,?,?)";
+              String sql = "insert into lib_member(member_username, member_password, member_firstname, member_lastname, member_address, member_phone, member_auther) values(?,?,?,?,?,?,?)";
               pstatement = connection.prepareStatement(sql);
               pstatement.setString(1, username);
               pstatement.setString(2, password);
@@ -61,7 +61,7 @@
 
         PreparedStatement pstatement = null;
         int updateQuery = 0;
-        String sql="Update lib_member set member_username=?, member_password=?, member_firstname=?, member_lastname=?, member_address=?, member_phone=?, member_type=? WHERE lib_member.member_id = "+userid;
+        String sql="Update lib_member set member_username=?, member_password=?, member_firstname=?, member_lastname=?, member_address=?, member_phone=?, member_auther=? WHERE lib_member.member_id = "+userid;
 	      pstatement = connection.prepareStatement(sql);
         pstatement.setString(1, username);
         pstatement.setString(2, password);

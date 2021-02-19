@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-md-6 col-sm-6">
                       <label class="form-label">Enter Author</label>
-                      <input name="author" type="text" class="form-control" value="<%=resultSet.getString("member_type")%>"/>
+                      <input name="author" type="text" class="form-control" value="<%=resultSet.getString("member_auther")%>"/>
                     </div>
                   </div>
                   <br />
