@@ -41,7 +41,7 @@ pageEncoding="UTF-8"%>
         if(strauthors.equals("member")){
             %>
         <script>
-            window.location.replace("semember.jsp");
+            window.location.replace("select.jsp");
         </script>
         <%
         } else{
