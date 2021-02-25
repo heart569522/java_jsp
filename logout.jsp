@@ -6,7 +6,7 @@
 %>
 <script>
 window.location.replace("index.jsp");
-// window.location.reload();
+window.location.replace("refresh.jsp");
 </script>
           
 	

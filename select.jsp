@@ -1,7 +1,11 @@
 <%@page import="java.sql.*" %>
 <%@ include file="connect.jsp" %>
 <%@ include file="./template/template_head.jsp" %>
-<% String strauthors = String.valueOf(session.getAttribute("strauthors"));%>
+
+<% 
+    // response.setIntHeader("Refresh", 1);
+    String strauthors = String.valueOf(session.getAttribute("strauthors"));
+%>
     <body style="background-color: #666;">
     
         <div class="container" style="padding-top: 20px;">
