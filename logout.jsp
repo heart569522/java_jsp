@@ -5,7 +5,7 @@
     session.removeAttribute("strauthors");
 %>
 <script>
-window.location.replace("index.jsp");
+// window.location.replace("index.jsp");
 window.location.replace("refresh.jsp");
 </script>
           

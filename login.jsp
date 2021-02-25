@@ -34,14 +34,14 @@ pageEncoding="UTF-8"%>
         if(strauthors.equals("admin")){ 
             %>
         <script>
-            window.location.replace("select.jsp");
+            window.location.replace("refresh.jsp");
         </script>
         <%
         }
         if(strauthors.equals("member")){
             %>
         <script>
-            window.location.replace("select.jsp");
+            window.location.replace("refresh.jsp");
         </script>
         <%
         } else{
