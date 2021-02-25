@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2021 at 03:58 AM
+-- Generation Time: Feb 25, 2021 at 04:11 AM
 -- Server version: 10.1.39-MariaDB
 -- PHP Version: 7.3.5
 
@@ -65,15 +65,15 @@ CREATE TABLE `lib_member` (
   `member_lastname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `member_address` text COLLATE utf8_unicode_ci NOT NULL,
   `member_phone` int(10) NOT NULL,
-  `member_type` varchar(10) COLLATE utf8_unicode_ci NOT NULL
+  `member_auther` varchar(10) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `lib_member`
 --
 
-INSERT INTO `lib_member` (`member_id`, `member_username`, `member_password`, `member_firstname`, `member_lastname`, `member_address`, `member_phone`, `member_type`) VALUES
-(1, 'เสี่ย', '11', 'โอ', 'จักรี', 'เยอรมัน', 11111, '0'),
+INSERT INTO `lib_member` (`member_id`, `member_username`, `member_password`, `member_firstname`, `member_lastname`, `member_address`, `member_phone`, `member_auther`) VALUES
+(1, 'user', '1234', 'user', 'user', 'user', 11111, 'member'),
 (2, 'ตู่', '28', 'ประยุทธ์', 'จันทรุปราคา', 'กทม.', 22222, '0'),
 (3, 'ฮาร์ท', '1234', 'Wirunrom', 'Wankasemsan', 'ดอยสะเก็ด', 33333, '1'),
 (4, 'รัต', '1234', 'ชุลีรัต', 'ล่าพระ', 'เชียงดาว', 44444, '0'),
@@ -82,7 +82,9 @@ INSERT INTO `lib_member` (`member_id`, `member_username`, `member_password`, `me
 (7, 'แตม', '1234', 'hudsapon', 'hongsoy', 'เมือง', 77777, '0'),
 (8, 'เนย', '1234', 'นริศรา', 'อุทัง', 'เมือง', 88888, '0'),
 (9, 'เรน', '1234', 'วินิจฉัย', 'วันเกษมสันต์', 'ดอยสะเก็ด', 99999, '0'),
-(10, 'ลัน', '1234', 'supakit', 'srisai', 'แม่ริม', 101010, '0');
+(10, 'ลัน', '1234', 'supakit', 'srisai', 'แม่ริม', 101010, '0'),
+(11, 'member', '1234', 'member', 'member', 'member', 1010, 'member'),
+(12, 'admin', '1234', 'admin', 'admin', 'admin', 10101, 'admin');
 
 -- --------------------------------------------------------
 
@@ -175,7 +177,7 @@ ALTER TABLE `lib_borrow`
 -- AUTO_INCREMENT for table `lib_member`
 --
 ALTER TABLE `lib_member`
-  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `lib_return`
