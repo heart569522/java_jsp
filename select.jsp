@@ -93,9 +93,9 @@
                 </table>
             <%
                 } else {
-                    <%
-                    <script>window.location.replace("index.jsp");</script>
-                    %>
+            %>  
+                <script>window.location.replace("index.jsp");</script>
+            <%
                 }
             %>
                 
