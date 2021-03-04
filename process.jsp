@@ -30,7 +30,7 @@
          String db_field_file = null;
          String db_field_user = null;
          String db_field_pass = null;
-           String db_field_authors = null;
+         String db_field_authors = null;
 
          while (i.hasNext()) {
 
@@ -77,7 +77,7 @@
          pstatement.setString(2, db_field_pass);
           pstatement.setString(3, db_field_authors);
            pstatement.setString(4, db_field_file);
-updateQuery = pstatement.executeUpdate();
+            updateQuery = pstatement.executeUpdate();
              if (updateQuery != 0)  { 
         %>
 <script>
