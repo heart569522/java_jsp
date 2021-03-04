@@ -1,5 +1,6 @@
 <%@ page import="java.io.*,java.util.*, javax.servlet.*" %>
 <%@ page import="javax.servlet.http.*" %>
+<%@ page import="java.sql.*" %>
 <%@ page import="org.apache.commons.fileupload.*" %>
 <%@ page import="org.apache.commons.fileupload.disk.*" %>
 <%@ page import="org.apache.commons.fileupload.servlet.*" %>
@@ -11,7 +12,7 @@
    int maxFileSize = 5000 * 1024;
    int maxMemSize = 5000 * 1024;
 
-   String filePath = "C:\\xampp\\tomcat\\webapps\\an\\images\\";
+   String filePath = "C:\\xampp\\tomcat\\webapps\\java_jsp\\images\\";
 
    String contentType = request.getContentType();
    
@@ -50,7 +51,7 @@
 
                fi.write(file);
 
-               db_field_file = filePath + fileName;
+               db_field_file = fileName;
             }
 
         if (fi.isFormField())
@@ -73,15 +74,15 @@
               int updateQuery = 0;
          String sql = "INSERT INTO member (username,password,authors,picture) VALUES (?,?,?,?)";
          pstatement = connection.prepareStatement(sql);
-          pstatement.setString(1, db_field_user);
+         pstatement.setString(1, db_field_user);
          pstatement.setString(2, db_field_pass);
-          pstatement.setString(3, db_field_authors);
-           pstatement.setString(4, db_field_file);
-            updateQuery = pstatement.executeUpdate();
-             if (updateQuery != 0)  { 
+         pstatement.setString(3, db_field_authors);
+         pstatement.setString(4, db_field_file);
+         updateQuery = pstatement.executeUpdate();
+            if (updateQuery != 0)  { 
         %>
 <script>
-window.location.replace("select.jsp");
+window.location.replace("iii.jsp");
 </script>
   <%
 }

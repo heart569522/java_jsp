@@ -1,3 +1,6 @@
+<%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="connect.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +19,7 @@
 <div class="container">
 <div class="row">
 <div class="col-4 col-sm-4">
-<a href="insert.php" class="btn btn-primary">เพิ่มข้อมูลสมาชิก</a>
+<a href="form_img.html" class="btn btn-primary">ADDMEMBER</a>
 </div>
 <div class="col-4"></div>
 <div class="col-4"></div>
@@ -38,22 +41,37 @@
                 <th></th>
             </tr>
         </thead>
+        <%
+try{
+String sql ="select * from member ";
+resultSet = statement.executeQuery(sql);
+int i=1;
+while(resultSet.next()){
+%>
         <tbody>
             <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td><button type="submit" class="btn btn-warning">EDIT</button></td>
-               <td><button type="submit" class="btn btn-danger">DELETE</button></td>
+               <td><%=i%></td>
+                <td><%=resultSet.getString("username") %></td>
+                <td><%=resultSet.getString("password") %></td>
+                <td><%=resultSet.getString("authors") %></td>
+                <td><img width="100px" src="images/<%=resultSet.getString("picture") %>" alt=""></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button type="submit" class="btn btn-warning">EDIT</button></td>
+                <td><button type="submit" class="btn btn-danger">DELETE</button></td>
             </tr>
         </tbody>
+        <%
+i++;
+}
+connection.close();
+} catch (Exception e) {
+e.printStackTrace();
+}
+%>
         <tfoot>
             <tr>
             <th>No.</th>
