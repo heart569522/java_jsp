@@ -15,6 +15,7 @@
             /* background-color: #00e08a; */
         }
     </style>
+   
     <%
         request.setCharacterEncoding("UTF-8"); 
         response.setContentType("text/html; charset-UTF-8");
