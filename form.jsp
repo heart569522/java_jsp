@@ -1,4 +1,4 @@
- <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@page import="java.sql.*" %> 
 <%@ include file="connect.jsp" %> 
 <%@ include file="./template/template_head.jsp" %>
@@ -6,15 +6,15 @@
   <div class="container">
     <div style="padding-top: 20px" class="container">
       <h1>INSERT DATA</h1>
-      <form action="insert.jsp" method="POST">
+      <form action="check_insert.jsp" method="POST" enctype="multipart/form-data">
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <label class="form-label">รหัสประจำตัวนักศึกษา</label>
-            <input name="id_stu" type="text" class="form-control" />
+            <input name="id_student" type="text" class="form-control" />
           </div>
           <div class="col-md-6 col-sm-6">
             <label class="form-label">คำนำหน้า</label>
-            <select class="form-select" name="prefix">
+            <select class="form-select" name="prename">
               <option selected disabled>กรุณาเลือก</option>
               <option values="เด็กชาย">เด็กชาย</option>
               <option values="เด็กหญิง">เด็กหญิง</option>
@@ -38,11 +38,12 @@
           <div class="col-md-6 col-sm-6">
             <label class="form-label">อายุ</label>
             <select class="form-select" name="age">
+              <option selected disabled>กรุณาเลือก</option>
               <%
                 int age = 1;
                 for(age=1; age<100; age++){
               %>
-                  <option><%=age %></option>
+                  <option value="<%=age %>"><%=age %></option>
               <%
                 }
               %> 
@@ -60,7 +61,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <label class="form-label">เบอร์โทรศัพท์</label>
-            <input name="tel" type="text" class="form-control" />
+            <input name="mobile" type="text" class="form-control" />
           </div>
           <div class="col-md-6 col-sm-6">
             <label class="form-label">Email</label>
@@ -79,7 +80,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 col-sm-12">
-            <label class="form-label">Enter Address</label>
+            <label class="form-label">Address</label>
             <textarea
               style="height: 100px"
               name="address"
@@ -87,15 +88,10 @@
             ></textarea>
           </div>
         </div>
-
+        <br>
         <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <label class="form-label">Enter Phone Number</label>
-            <input name="phone" type="text" class="form-control" />
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <label class="form-label">Enter Author</label>
-            <input name="author" type="text" class="form-control" />
+          <div class="col-md-12 col-sm-12">
+            <input type="file" class="form-control" name="File-upload" id="file" >
           </div>
         </div>
         <br />

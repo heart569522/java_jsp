@@ -72,7 +72,7 @@
          }
             PreparedStatement pstatement = null;
               int updateQuery = 0;
-         String sql = "INSERT INTO member (username,password,authors,picture) VALUES (?,?,?,?)";
+         String sql = "INSERT INTO student (username,password,authors,picture) VALUES (?,?,?,?)";
          pstatement = connection.prepareStatement(sql);
          pstatement.setString(1, db_field_user);
          pstatement.setString(2, db_field_pass);
