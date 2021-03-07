@@ -28,7 +28,7 @@
          List fileItems = upload.parseRequest(request);
          Iterator<FileItem> i = fileItems.iterator();
          
-         String db_field_idstu = null;
+         String db_field_id_student = null;
          String db_field_prename = null;
          String db_field_firstname = null;
          String db_field_lastname = null;
@@ -68,7 +68,7 @@
                String fieldName = fi.getFieldName();
                String fieldValue = fi.getString();
                   if (fieldName.equals("id_student")) {
-                     db_field_idstu = fieldValue;
+                     db_field_id_student = fieldValue;
                   } 
                   else if (fieldName.equals("prename")){
                      db_field_prename = fieldValue;
@@ -110,7 +110,7 @@
               int updateQuery = 0;
          String sql = "INSERT INTO student (id_student, prename, firstname, lastname, age, gender, address, mobile, email, username, password) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
          pstatement = connection.prepareStatement(sql);
-         pstatement.setString(1, db_field_idstu);
+         pstatement.setString(1, db_field_id_student);
          pstatement.setString(2, db_field_prename);
          pstatement.setString(3, db_field_firstname);
          pstatement.setString(4, db_field_lastname);
@@ -119,8 +119,9 @@
          pstatement.setString(7, db_field_address);
          pstatement.setString(8, db_field_mobile);
          pstatement.setString(9, db_field_email);
-         pstatement.setString(10, db_field_username);
-         pstatement.setString(11, db_field_password);
+         pstatement.setString(10, db_field_file);
+         pstatement.setString(11, db_field_username);
+         pstatement.setString(12, db_field_password);
          updateQuery = pstatement.executeUpdate();
             if (updateQuery != 0)  { 
          %>
