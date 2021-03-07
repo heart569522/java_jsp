@@ -108,7 +108,7 @@
          }
             PreparedStatement pstatement = null;
               int updateQuery = 0;
-         String sql = "INSERT INTO student (id_student, prename, firstname, lastname, age, gender, address, mobile, email, img_name, img_path, username, password) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+         String sql = "INSERT INTO student (id_student, prename, firstname, lastname, age, gender, address, mobile, email, img_name, username, password) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
          pstatement = connection.prepareStatement(sql);
          pstatement.setString(1, db_field_id_student);
          pstatement.setString(2, db_field_prename);

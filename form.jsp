@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@page import="java.sql.*" %> 
-<%@ include file="connect.jsp" %> 
+<%@ include file="connect_test.jsp" %> 
 <%@ include file="./template/template_head.jsp" %>
 <body>
   <div class="container">
