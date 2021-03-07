@@ -5,7 +5,7 @@
 <%@ page import="org.apache.commons.fileupload.disk.*" %>
 <%@ page import="org.apache.commons.fileupload.servlet.*" %>
 <%@ page import="org.apache.commons.io.output.*" %>
-<%@ include file="connect.jsp" %>
+<%@ include file="connect_test.jsp" %>
 
 <%
    File file;
@@ -67,11 +67,38 @@
             {
                String fieldName = fi.getFieldName();
                String fieldValue = fi.getString();
-               if (fieldName.equals("username")) {
+                  if (fieldName.equals("id_student")) {
+                     db_field_idstu = fieldValue;
+                  } 
+                  else if (fieldName.equals("prename")){
+                     db_field_prename = fieldValue;
+                  }
+                  else if (fieldName.equals("firstname")){
+                     db_field_firstname = fieldValue;
+                  }
+                  else if (fieldName.equals("lastname")){
+                     db_field_lastname = fieldValue;
+                  }
+                  else if (fieldName.equals("age")){
+                     db_field_age = fieldValue;
+                  }
+                  else if (fieldName.equals("gender")){
+                     db_field_gender = fieldValue;
+                  }
+                  else if (fieldName.equals("address")){
+                     db_field_address = fieldValue;
+                  }
+                  else if (fieldName.equals("mobile")){
+                     db_field_mobile = fieldValue;
+                  }
+                  else if (fieldName.equals("email")){
+                     db_field_email = fieldValue;
+                  }
+                  else if (fieldName.equals("username")){
                      db_field_username = fieldValue;
                   }
                   else if (fieldName.equals("password")){
-                      db_field_password = fieldValue;
+                     db_field_password = fieldValue;
                   }
                   //else if(fieldName.equals("send_authors"))
                   //{
@@ -83,23 +110,28 @@
               int updateQuery = 0;
          String sql = "INSERT INTO student (id_student, prename, firstname, lastname, age, gender, address, mobile, email, username, password) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
          pstatement = connection.prepareStatement(sql);
-         pstatement.setString(1, db_field_username);
-         pstatement.setString(2, db_field_password);
-         //pstatement.setString(3, db_field_authors);
-         pstatement.setString(4, db_field_file);
+         pstatement.setString(1, db_field_idstu);
+         pstatement.setString(2, db_field_prename);
+         pstatement.setString(3, db_field_firstname);
+         pstatement.setString(4, db_field_lastname);
+         pstatement.setString(5, db_field_age);
+         pstatement.setString(6, db_field_gender);
+         pstatement.setString(7, db_field_address);
+         pstatement.setString(8, db_field_mobile);
+         pstatement.setString(9, db_field_email);
+         pstatement.setString(10, db_field_username);
+         pstatement.setString(11, db_field_password);
          updateQuery = pstatement.executeUpdate();
             if (updateQuery != 0)  { 
-        %>
-<script>
-window.location.replace("iii.jsp");
-</script>
-  <%
-}
+         %>
+         <script>
+         window.location.replace("show_data.jsp");
+         </script>
+<%
+         }
 
       } catch (Exception ex) {
-
          System.out.println(ex);
-
       }
 
    }
