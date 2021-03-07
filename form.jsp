@@ -10,11 +10,11 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <label class="form-label">รหัสประจำตัวนักศึกษา</label>
-            <input name="id_student" type="text" class="form-control" />
+            <input name="id_student" type="text" class="form-control" id="fieldName" />
           </div>
           <div class="col-md-6 col-sm-6">
             <label class="form-label">คำนำหน้า</label>
-            <select class="form-select" name="prename">
+            <select class="form-select" name="prename" id="fieldName">
               <option selected disabled>กรุณาเลือก</option>
               <option values="เด็กชาย">เด็กชาย</option>
               <option values="เด็กหญิง">เด็กหญิง</option>
@@ -27,17 +27,17 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <label class="form-label">ชื่อ</label>
-            <input name="firstname" type="text" class="form-control" />
+            <input name="firstname" type="text" class="form-control" id="fieldName"/>
           </div>
           <div class="col-md-6 col-sm-6">
             <label class="form-label">นามสกุล</label>
-            <input name="lastname" type="text" class="form-control" />
+            <input name="lastname" type="text" class="form-control" id="fieldName"/>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <label class="form-label">อายุ</label>
-            <select class="form-select" name="age">
+            <select class="form-select" name="age" id="fieldName">
               <option selected disabled>กรุณาเลือก</option>
               <%
                 int age = 1;
@@ -51,7 +51,7 @@
           </div>
           <div class="col-md-6 col-sm-6">
             <label class="form-label">เพศ</label>
-            <select class="form-select" name="gender">
+            <select class="form-select" name="gender" id="fieldName">
               <option selected disabled>กรุณาเลือก</option>
               <option value="ชาย">ชาย</option>
               <option value="หญิง">หญิง</option>
@@ -61,21 +61,21 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <label class="form-label">เบอร์โทรศัพท์</label>
-            <input name="mobile" type="text" class="form-control" />
+            <input name="mobile" type="text" class="form-control" id="fieldName"/>
           </div>
           <div class="col-md-6 col-sm-6">
             <label class="form-label">Email</label>
-            <input name="email" type="text" class="form-control" />
+            <input name="email" type="text" class="form-control" id="fieldName"/>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <label class="form-label">Username</label>
-            <input name="username" type="text" class="form-control" />
+            <input name="username" type="text" class="form-control" id="fieldName"/>
           </div>
           <div class="col-md-6 col-sm-6">
             <label class="form-label">Password</label>
-            <input name="password" type="password" class="form-control" />
+            <input name="password" type="password" class="form-control" id="fieldName"/>
           </div>
         </div>
         <div class="row">
@@ -85,6 +85,7 @@
               style="height: 100px"
               name="address"
               class="form-control"
+              id="fieldName"
             ></textarea>
           </div>
         </div>
