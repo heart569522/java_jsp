@@ -24,21 +24,19 @@
 <div class="col-4"></div>
 <div class="col-4"></div>
 <div class="col-12 col-sm-12">
-<table id="example" class="display" style="width:100%">
+<table class="display" style="width:100%">
         <thead>
             <tr>
                 <th>No.</th>
-                <th>id_student</th>
-                <th>Name</th>
-                <th>lastname</th>
-                <th>age</th>
-                <th>gender</th>
-                <th>address</th>
+                <th>ID_student</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Address</th>
                 <th>Tel</th>
+                <th>Username</th>
                 <th>Picture</th>
-                <th>username</th>
-                <th></th>
-                <th></th>
             </tr>
         </thead>
         <%
@@ -72,22 +70,6 @@ connection.close();
 e.printStackTrace();
 }
 %>
-        <tfoot>
-            <tr>
-            <th>No.</th>
-                <th>id_student</th>
-                <th>Name</th>
-                <th>lastname</th>
-                <th>age</th>
-                <th>gender</th>
-                <th>address</th>
-                <th>Tel</th>
-                <th>Picture</th>
-                <th>username</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </tfoot>
     </table>
     </div>
     </div>
