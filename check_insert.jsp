@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.io.*,java.util.*, javax.servlet.*" %>
 <%@ page import="javax.servlet.http.*" %>
 <%@ page import="java.sql.*" %>
@@ -6,6 +7,14 @@
 <%@ page import="org.apache.commons.fileupload.servlet.*" %>
 <%@ page import="org.apache.commons.io.output.*" %>
 <%@ include file="connect_test.jsp" %>
+
+<%-- <%
+    String id_student = request.getParameter("id_student");
+    String prename = request.getParameter("prename");
+
+%>
+<%=id_student%>
+<%=prename%> --%>
 
 <%
    File file;

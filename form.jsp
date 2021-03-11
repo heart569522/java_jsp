@@ -4,13 +4,13 @@
 <%@ include file="./template/template_head.jsp" %>
 <body>
   <div class="container">
-    <div style="padding-top: 20px" class="container">
+    <form action="check_insert.jsp" method="get">
       <h1>INSERT DATA</h1>
-      <form action="check_insert.jsp" method="POST" enctype="multipart/form-data">
+   
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <label class="form-label">รหัสประจำตัวนักศึกษา</label>
-            <input name="id_student" type="text" class="form-control" id="fieldName" />
+            <input name="id_student" type="text" class="form-control" id="id_student" />
           </div>
           <div class="col-md-6 col-sm-6">
             <label class="form-label">คำนำหน้า</label>
@@ -92,7 +92,7 @@
         <br>
         <div class="row">
           <div class="col-md-12 col-sm-12">
-            <input type="file" class="form-control" name="File-upload" id="file" >
+            <%-- <input type="file" class="form-control" name="File-upload" id="file" > --%>
           </div>
         </div>
         <br />
