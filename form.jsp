@@ -4,7 +4,7 @@
 <%@ include file="./template/template_head.jsp" %>
 <body>
   <div class="container">
-    <form action="check_insert.jsp" method="get">
+    <form action="check_insert.jsp" method="post" enctype="multipart/form-data">
       <h1>INSERT DATA</h1>
    
         <div class="row">
