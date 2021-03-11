@@ -92,7 +92,7 @@
         <br>
         <div class="row">
           <div class="col-md-12 col-sm-12">
-            <%-- <input type="file" class="form-control" name="File-upload" id="file" > --%>
+            <input type="file" class="form-control" name="File-upload" id="file" >
           </div>
         </div>
         <br />
