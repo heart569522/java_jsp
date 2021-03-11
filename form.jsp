@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <label class="form-label">รหัสประจำตัวนักศึกษา</label>
-            <input name="id_student" type="text" class="form-control" id="id_student" />
+            <input name="id_student" type="text" class="form-control" id="fieldName" />
           </div>
           <div class="col-md-6 col-sm-6">
             <label class="form-label">คำนำหน้า</label>
