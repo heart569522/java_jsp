@@ -52,11 +52,11 @@
                             <%
                             i++;
                         }
-                        connection.close();
-                        } catch (Exception e) {
-                        e.printStackTrace();
-                        }
-                        %>
+                            connection.close();
+                            } catch (Exception e) {
+                            e.printStackTrace();
+                            }
+                            %>
             </table>
         </div>
 </body>
